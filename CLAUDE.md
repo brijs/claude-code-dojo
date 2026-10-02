@@ -21,4 +21,4 @@ Interactive, Kokoro-narrated explainer "Claude Code Dojo with Sensei Shell": 22 
 - Style: terminal / retro CRT. Guide: Sensei Shell (belt = progress, black belt via final quiz >= 6/8).
 - Voice: Kokoro Heart (af_heart) only; no browser speech.
 - Facts come from the official Claude Code docs (interactive mode, settings, memory, best practices) as of Oct 2026; re-verify shortcuts/commands before publishing.
-- Planned hosting: GitHub Pages under github.com/brijs, or Cloudflare Pages. Credit github.com/brijs alongside Brijesh Shetty.
+- Hosting: GitHub Pages at https://brijs.github.io/claude-code-dojo/ (repo github.com/brijs/claude-code-dojo, serves `docs/index.html` from main; `build.py` writes it, so commit `docs/` after rebuilding). Credit github.com/brijs alongside Brijesh Shetty.

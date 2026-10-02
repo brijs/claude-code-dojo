@@ -9,7 +9,9 @@ Everything ships as one self-contained HTML file with the narration embedded, so
 
 ## Try it
 
-Open `dist/claude-code-dojo.html` in a browser and press **enter the dojo**. Click once on the page if audio doesn't start (browsers block autoplay until you interact).
+**Live:** https://brijs.github.io/claude-code-dojo/
+
+Or open `dist/claude-code-dojo.html` locally in a browser and press **enter the dojo**. Click once on the page if audio doesn't start (browsers block autoplay until you interact).
 
 ## Build it yourself
 
@@ -24,6 +26,7 @@ python3 tts.py && python3 build.py && python3 test.py
 
 - `narration.json` holds one narration entry per scene; `tts.py` renders only changed scenes (voice: Kokoro `af_heart`).
 - `parts/` holds the CSS, engine and scene scripts; `build.py` concatenates them into `dist/`.
+- `build.py` also copies the page to `docs/index.html`, which GitHub Pages serves (branch `main`, folder `/docs`).
 - `test.py` walks every scene in Playwright and reports JS errors (`PW_CHANNEL=chrome` uses installed Chrome).
 - `storyboard.md` lists the scenes; `.claude/skills/animated-explainer-builder/` is a reusable skill for other topics.
 

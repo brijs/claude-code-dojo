@@ -8,4 +8,6 @@ P=lambda n:open('parts/'+n).read()
 html=P('a_head.html')+'<script>\nconst NARR='+json.dumps(N)+';\nconst AUDIO='+json.dumps(A)+';\n'+P('b_engine.js')+P('c_scenes1.js')+P('d_scenes2.js')+P('e_scenes3.js')+P('f_scenes_parallel.js')+'\nbuild();\n</script>\n</body></html>'
 os.makedirs('dist',exist_ok=True)
 open('dist/claude-code-dojo.html','w').write(html)
+os.makedirs('docs',exist_ok=True)
+open('docs/index.html','w').write(html)  # served by GitHub Pages
 print(len(html)//1024,'KB')
